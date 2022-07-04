@@ -12,6 +12,11 @@ const { Sequelize } = require('sequelize');
  *      logging: false (this last key/value is optional, but is often used with sequelize and I wanted you to see it.)
  */
 
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: path.join(__dirname, 'db.sqlite')
+})
+
 module.exports = {
     sequelize,
     Sequelize
